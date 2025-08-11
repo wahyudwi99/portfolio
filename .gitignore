@@ -4,9 +4,6 @@ node_modules/
 # Output of 'next build'
 .next/
 
-# Output of 'npm run export'
-out/
-
 # Production
 build/
 
