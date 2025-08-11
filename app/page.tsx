@@ -5,10 +5,7 @@ import Projects from "./components/Projects";
 export default function Home() {
   return (
     <>
-    <div className="h-screen">
-      <div>
-        
-      </div>
+    <div>
         <div className="flex flex-col">
             <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400 font-sans font-bold text-7xl mt-80 ml-15">
                 Hi, my name is Wahyu !
@@ -25,17 +22,17 @@ export default function Home() {
             </p>
             <div className="flex flex-row gap-1 ml-15 mt-10 text-[18px]">
               <p>My updated resume is available</p>
-              <Link href="https://drive.google.com/file/d/1VW1UdbYN5we2MtPKw4-lsM1KcyyqgslW/view?usp=sharing" className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500 font-sans font-bold">
+              <Link href="https://drive.google.com/file/d/1cqo2AjoO3XIcYyiA2X6V0a4FNt6Z_iSy/view?usp=sharing" className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500 font-sans font-bold">
                   here
               </Link>
               <p>!</p>
             </div>
         </div>
     </div>
-    <div>
+    <div className="mt-70">
         <Experiences/>
     </div>
-    <div className="mt-30">
+    <div className="mt-30 mb-20">
         <Projects/>
     </div>
     </>
