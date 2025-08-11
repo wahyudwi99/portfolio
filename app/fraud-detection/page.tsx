@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 function users() {
     return (
@@ -14,7 +15,7 @@ function users() {
                     </h2>
                     <p className="mt-2 text-justify">
                         This experiment has aim to detect fraud in credit card transactions. The challenging part of this project is to detect the fraud
-                        with small amount of fraud's sample data among many normal transactions.
+                        with small amount of frauds sample data among many normal transactions.
                     </p>
                 </div>
                 <div className="max-w-200">
@@ -23,7 +24,7 @@ function users() {
                     </h2>
                     <p className="mt-2 text-justify">
                         This experiment used credit card transaction data from Vesta Corporation. The total number of data in this dataset is more than 500 thousand
-                        rows with more than 400 hundreds features. First, I removed feature which missed more than 80% of its data because I think this feature can't be
+                        rows with more than 400 hundreds features. First, I removed feature which missed more than 80% of its data because I think this feature can not be
                         filled with any methods since it already loss their identity. Then, I selected other features by checking significance level (P-Value) of those features with
                         the target feature. This process has been done with ANOVA (for numerical independent feature and binary target feature) and Chi-Square (for categorical
                         independent feature and binary target feature). After that, I proceed missing values by replacing them with the relationship between specific independent feature
@@ -39,10 +40,10 @@ function users() {
                         Logistic Regression, and XGB Classifier. The detail result on each model is shown below.
                     </p>
                     <div className="flex flex-wrap gap-3 justify-center">
-                        <img src="./images/fraud_detection/image_1.png" className="w-90 h-65 mt-5"/> 
-                        <img src="./images/fraud_detection/image_2.png" className="w-90 h-65 mt-5"/> 
-                        <img src="./images/fraud_detection/image_3.png" className="w-90 h-65 mt-5"/> 
-                        <img src="./images/fraud_detection/image_4.png" className="w-90 h-65 mt-5"/> 
+                        <Image src="./images/fraud_detection/image_1.png" alt="Random Forest Classifer Result" width={300} height={80} className="mt-5"/> 
+                        <Image src="./images/fraud_detection/image_2.png" alt="Decision Tree Classifier Result" width={300} height={80} className="mt-5"/> 
+                        <Image src="./images/fraud_detection/image_3.png" alt="Logistic Regression Result" width={300} height={80} className="mt-5"/> 
+                        <Image src="./images/fraud_detection/image_4.png" alt="XGBoost Classifier Result" width={300} height={80} className="mt-5"/> 
                     </div>
                     <p className="mt-2 text-justify">
                         Based on training result above, we can see Random Forest Classifier showed good score than others, followed by XGBoost Classifier.

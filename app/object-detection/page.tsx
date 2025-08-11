@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 function users() {
     return (
@@ -26,7 +27,7 @@ function users() {
                         are structured into training and validation.
                     </p>
                 </div>
-                <div className="max-w-200">
+                <div className="flex  flex-col max-w-200 items-center">
                     <h2 className="bg-clip-text bg-gradient-to-r from-blue-300 to-purple-800 text-transparent text-2xl font-sans font-bold text-center">
                         Modeling
                     </h2>
@@ -34,7 +35,7 @@ function users() {
                         I used YOLOv8 and trained the model under NVIDIA RTX 3060 Ti. The training process has been done in 50 epochs
                         for approximately 48 minutes with the detail result below.
                     </p>
-                    <img src="./images/object_detection/image_3.png" className="w-200 h-60 mt-5"/> 
+                    <Image src="./images/object_detection/image_3.png" alt="YOLO Training Result" width={700} height={80} className="mt-5"/> 
                 </div>
                 <div className="max-w-200">
                     <h2 className="bg-clip-text bg-gradient-to-r from-blue-300 to-purple-800 text-transparent text-2xl font-sans font-bold text-center">
@@ -45,8 +46,8 @@ function users() {
                         as shown below which represent how bounding boxes are generated to detect objects.
                     </p>
                     <div className="flex flex-row flex-wrap gap-5 mt-5 justify-center lg-1000px:justify-start max-w-200">
-                        <img src="./images/object_detection/image_2.png" className="w-90"/> 
-                        <img src="./images/object_detection/image_1.png" className="w-90"/>
+                        <Image src="./images/object_detection/image_2.png" alt="Inference Image Result 1" width={300} height={80}/> 
+                        <Image src="./images/object_detection/image_1.png" alt="Inference Image Result 2" width={300} height={80}/>
                     </div>
                 </div>
             </div>

@@ -1,9 +1,6 @@
-import Image from "next/image";
 import Link from 'next/link';
-import NavButton from "./components/NavButton";
 import Experiences from "./components/Experiences";
 import Projects from "./components/Projects";
-import ProfilePhoto from "./components/ProfilePhoto";
 
 export default function Home() {
   return (

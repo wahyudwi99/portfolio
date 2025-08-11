@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 function users() {
     return (
@@ -36,17 +37,17 @@ function users() {
                         also has kernel size = 4, stride = 2, and padding = 1. The detail of the whole architecture can be shown below.
                     </p>
                     <div className="place-items-center">
-                        <img src="./images/convolutional_autoencoder/image_1.png" className="w-160 h-60 mt-5"/> 
+                        <Image src="./images/convolutional_autoencoder/image_1.png" alt="Full Convolutional AutoEncoder Network" width={600} height={80} className="mt-5"/> 
                     </div>
                     <p className="mt-5 text-justify">
-                        After defining the model's architecture, then I trained my model for 50 epochs. To evaluate the performance of this model,
+                        After defining the model architecture, then I trained my model for 50 epochs. To evaluate the performance of this model,
                         I used Mean Absolute Error fro calculating reconstruction loss. Basically, the approach is pretty simple, I just calculated
                         the difference between prediction values and original image pixels. It can be happened because the output of decoder will be
                         a vector which has the same dimension as the input image shape. After 50 epochs, the reconstruction loss value decreased significantly
                         as shown on the image below.
                     </p>
                     <div className="place-items-center">
-                        <img src="./images/convolutional_autoencoder/image_2.png" className="w-100 h-80 mt-5"/> 
+                        <Image src="./images/convolutional_autoencoder/image_2.png" alt="Reconstruction Loss" width={500} height={80} className="mt-5"/> 
                     </div>
                 </div>
                 <div className="max-w-200">
@@ -60,9 +61,9 @@ function users() {
                         with 3 different images as shown below
                     </p>
                     <div className="flex flex-row flex-wrap gap-5 mt-5 justify-center lg-1000px:justify-start max-w-200">
-                        <img src="./images/convolutional_autoencoder/image_3.png" className="w-90"/> 
-                        <img src="./images/convolutional_autoencoder/image_4.png" className="w-90"/>
-                        <img src="./images/convolutional_autoencoder/image_5.png" className="w-90"/>
+                        <Image src="./images/convolutional_autoencoder/image_3.png" alt="Inference image result 1" width={500} height={80}/> 
+                        <Image src="./images/convolutional_autoencoder/image_4.png" alt="Inference image result 2" width={500} height={80}/>
+                        <Image src="./images/convolutional_autoencoder/image_5.png" alt="Inference image result 3" width={500} height={80}/>
                     </div>
                     <p className="mt-5 text-justify">
                         As we can see on the above examples, the output images from decoder part are very similar with the input images.
