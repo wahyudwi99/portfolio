@@ -125,9 +125,12 @@ export default function LightProfessionalPortfolio() {
             <div className="relative">
               <div className="absolute -inset-6 border border-emerald-100 rounded-full animate-[spin_15s_linear_infinite]"></div>
               <div className="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-[6px] border-white bg-white shadow-[0_20px_50px_rgba(0,0,0,0.1)] relative z-10">
-                <img 
+                <Image 
                   src="/images/Personal_Photo/Personal Photo.jpg" 
                   alt="Wahyu Dwi Nugraha" 
+                  width={288}
+                  height={288}
+                  priority
                   className="w-full h-full object-cover transition-all duration-700"
                 />
               </div>
@@ -202,12 +205,6 @@ export default function LightProfessionalPortfolio() {
         <div className="flex gap-10">
           <a href="https://www.linkedin.com/in/wahyudwinugraha/" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 transition-colors">LinkedIn</a>
           <a href="https://github.com/wahyudwi99" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 transition-colors">GitHub</a>
-        </div>
-      </footer>
-    </div>
-  );
-}
-tHub</a>
         </div>
       </footer>
     </div>
