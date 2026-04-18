@@ -1,81 +1,94 @@
-import React from 'react'
-import Image from 'next/image'
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
-function users() {
-    return (
-        <div className="flex flex-col m-10 gap-2 items-center">
-            <h1 className="bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 text-transparent text-4xl font-sans font-bold text-center max-w-200">
-                Image Dimensionality Reduction Using Convolutional Autoencoder
-            </h1>
-            <p className="border-1 w-full lg:w-200 mb-8"></p>
-            <div className="flex flex-col gap-10">
-                <div className="max-w-200">
-                    <h2 className="bg-clip-text bg-gradient-to-r from-blue-300 to-purple-800 text-transparent text-2xl font-sans font-bold text-center">
-                        The Goal
-                    </h2>
-                    <p className="mt-2 text-justify">
-                        This experiment has aim to reduce the dimension of an image by using convolutional autoencoder approach.
-                    </p>
-                </div>
-                <div className="max-w-200">
-                    <h2 className="bg-clip-text bg-gradient-to-r from-blue-300 to-purple-800 text-transparent text-2xl font-sans font-bold text-center">
-                        Preprocessing
-                    </h2>
-                    <p className="mt-2 text-justify">
-                        This experiment used crop image dataset which contains several variation of crops, those are jute, maize, rice, sugarcane, and wheat.
-                        I loaded these images and converted them into tensor with the shape of 224 x 224 x 3 (RGB).
-                    </p>
-                </div>
-                <div className="max-w-200">
-                    <h2 className="bg-clip-text bg-gradient-to-r from-blue-300 to-purple-800 text-transparent text-2xl font-sans font-bold text-center">
-                        Modeling
-                    </h2>
-                    <p className="mt-2 text-justify ">
-                        In this section, I used custom convolutional layer for encoding part and convolutional transpose for decoding part.
-                        The encoder part consist of 2 conv2d with 64 and 256 output channel respectively. Both of them has kernel size = 3, stride = 2,
-                        and padding = 1. On the other part, decoder consists of 2 ConvTranspose2d with 256 and 64 output channels respectively. Each of them
-                        also has kernel size = 4, stride = 2, and padding = 1. The detail of the whole architecture can be shown below.
-                    </p>
-                    <div className="place-items-center">
-                        <Image src="./images/convolutional_autoencoder/image_1.png" alt="Full Convolutional AutoEncoder Network" width={600} height={80} className="mt-5"/> 
-                    </div>
-                    <p className="mt-5 text-justify">
-                        After defining the model architecture, then I trained my model for 50 epochs. To evaluate the performance of this model,
-                        I used Mean Absolute Error fro calculating reconstruction loss. Basically, the approach is pretty simple, I just calculated
-                        the difference between prediction values and original image pixels. It can be happened because the output of decoder will be
-                        a vector which has the same dimension as the input image shape. After 50 epochs, the reconstruction loss value decreased significantly
-                        as shown on the image below.
-                    </p>
-                    <div className="place-items-center">
-                        <Image src="./images/convolutional_autoencoder/image_2.png" alt="Reconstruction Loss" width={500} height={80} className="mt-5"/> 
-                    </div>
-                </div>
-                <div className="max-w-200">
-                    <h2 className="bg-clip-text bg-gradient-to-r from-blue-300 to-purple-800 text-transparent text-2xl font-sans font-bold text-center">
-                        Inference
-                    </h2>
-                    <p className="mt-2 text-justify">
-                        In the inference process, I tested my trained model with testing dataset. The goal is to reduce the dimension
-                        of the input image using encoder part, then re-construct the input image using decoder part. The inference result can
-                        be defined to be successful if the output of encoder is very similar with the input image. I tested this network
-                        with 3 different images as shown below
-                    </p>
-                    <div className="flex flex-row flex-wrap gap-5 mt-5 justify-center lg-1000px:justify-start max-w-200">
-                        <Image src="./images/convolutional_autoencoder/image_3.png" alt="Inference image result 1" width={500} height={80}/> 
-                        <Image src="./images/convolutional_autoencoder/image_4.png" alt="Inference image result 2" width={500} height={80}/>
-                        <Image src="./images/convolutional_autoencoder/image_5.png" alt="Inference image result 3" width={500} height={80}/>
-                    </div>
-                    <p className="mt-5 text-justify">
-                        As we can see on the above examples, the output images from decoder part are very similar with the input images.
-                        This means that our encoder part was successfully extract relevant information from the input image with low reconstruction loss.
-                        We can then use this network to reduce the dimension of our image using encoder part which is very useful to either storing image
-                        information as a vector or etc.
-                    </p>
-                </div>
-            </div>
-            
+export default function ConvolutionalAutoencoder() {
+  return (
+    <div className="min-h-screen bg-[#f8f9fa] text-zinc-600 font-sans selection:bg-emerald-100 selection:text-emerald-900">
+      <div className="fixed -top-24 -right-24 w-[600px] h-[600px] bg-emerald-500/5 blur-[120px] pointer-events-none"></div>
+      <div className="fixed -bottom-24 -left-24 w-[600px] h-[600px] bg-emerald-500/5 blur-[120px] pointer-events-none"></div>
+
+      <nav className="sticky top-0 z-50 bg-[#f8f9fa]/80 backdrop-blur-md border-b border-zinc-200/50">
+        <div className="max-w-6xl mx-auto px-8 h-20 flex items-center justify-between">
+          <Link href="/" className="text-zinc-900 text-xl font-bold tracking-tighter flex items-center gap-2">
+            Wahyu Dwi Nugraha
+          </Link>
+          <Link href="/" className="text-[10px] font-black uppercase tracking-widest border border-zinc-900 px-6 py-2 rounded-full text-zinc-900 hover:bg-zinc-900 hover:text-white transition-all">
+            Back to Home
+          </Link>
         </div>
-    )
-}
+      </nav>
 
-export default users
+      <main className="relative z-10 max-w-4xl mx-auto px-8 py-24">
+        <div className="mb-16">
+          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 text-[10px] font-black tracking-[0.2em] uppercase mb-8">
+            Computer Vision Project 2025
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-zinc-900 tracking-tighter leading-[1.1] mb-8">
+            Convolutional <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-800 to-emerald-600">
+              Autoencoder
+            </span>
+          </h1>
+          <p className="text-lg md:text-xl text-zinc-500 leading-relaxed font-light italic">
+            Image dimensionality reduction and compression into latent space with minimal reconstruction loss.
+          </p>
+        </div>
+
+        <div className="space-y-24">
+          <section>
+            <div className="flex items-center gap-4 mb-8">
+              <h2 className="text-2xl font-bold text-zinc-900 tracking-tight italic">The Objective</h2>
+              <div className="h-px flex-1 bg-zinc-200"></div>
+            </div>
+            <p className="text-zinc-500 leading-relaxed font-light text-lg">
+                This experiment has aim to reduce the dimension of an image by using convolutional autoencoder approach. We used a crop image dataset containing several variations like jute, maize, rice, sugarcane, and wheat, resized to 224x224x3 tensors.
+            </p>
+          </section>
+
+          <section>
+            <div className="flex items-center gap-4 mb-8">
+              <h2 className="text-2xl font-bold text-zinc-900 tracking-tight italic">Model Architecture</h2>
+              <div className="h-px flex-1 bg-zinc-200"></div>
+            </div>
+            <p className="text-zinc-500 leading-relaxed font-light mb-12">
+                The encoder consists of custom convolutional layers (64 and 256 channels), while the decoder uses ConvTranspose2d layers to reconstruct the image.
+            </p>
+            <div className="rounded-3xl overflow-hidden bg-white shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-zinc-200/50 p-4 md:p-8">
+              <Image src="/images/convolutional_autoencoder/image_1.png" alt="Full Architecture" width={1200} height={400} className="w-full h-auto rounded-xl"/> 
+            </div>
+          </section>
+
+          <section>
+            <div className="flex items-center gap-4 mb-8">
+              <h2 className="text-2xl font-bold text-zinc-900 tracking-tight italic">Training & Inference</h2>
+              <div className="h-px flex-1 bg-zinc-200"></div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+              <div>
+                <p className="text-zinc-500 leading-relaxed font-light mb-6">
+                    After 50 epochs, the reconstruction loss (calculated via Mean Absolute Error) decreased significantly. The decoder successfully reconstructs images from the compressed latent space.
+                </p>
+                <div className="rounded-2xl overflow-hidden border border-zinc-200">
+                  <Image src="/images/convolutional_autoencoder/image_2.png" alt="Reconstruction Loss" width={600} height={400} className="w-full h-auto"/>
+                </div>
+              </div>
+              <div className="space-y-4">
+                <Image src="/images/convolutional_autoencoder/image_3.png" alt="Result 1" width={400} height={300} className="rounded-2xl border border-zinc-200 w-full"/>
+                <Image src="/images/convolutional_autoencoder/image_4.png" alt="Result 2" width={400} height={300} className="rounded-2xl border border-zinc-200 w-full"/>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer className="max-w-6xl mx-auto px-8 py-16 flex justify-between items-center text-[10px] font-black tracking-[0.3em] text-zinc-400 uppercase border-t border-zinc-200">
+        <p>© 2026 Wahyu Dwi Nugraha</p>
+        <div className="flex gap-10">
+          <a href="https://www.linkedin.com/in/wahyudwinugraha/" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 transition-colors">LinkedIn</a>
+          <a href="https://github.com/wahyudwi99" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 transition-colors">GitHub</a>
+        </div>
+      </footer>
+    </div>
+  );
+}
