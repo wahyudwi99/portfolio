@@ -60,7 +60,7 @@ export default function AgenticChatbotRAG() {
             </p>
             <div className="rounded-3xl overflow-hidden bg-white shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-zinc-200/50 p-4 md:p-8">
               <Image 
-                src="/images/Agentic_RAG/Agentic_RAG.png" 
+                src="/portfolio/images/Agentic_RAG/Agentic_RAG.png" 
                 alt="Agentic Chatbot RAG Architecture" 
                 width={1200} 
                 height={675} 
