@@ -4,25 +4,39 @@ import Link from 'next/link';
 export default function LightProfessionalPortfolio() {
   const experiences = [
     {
-      title: "Lead of AI & Ops. Excellence",
+      title: "Senior AI Engineer (Operation Excellence)",
       company: "Mbiz.co.id",
       location: "Jakarta, Indonesia",
       period: "Mar 2025 - present",
-      description: "Building automation using machine learning, deep learning, or generative AI approaches, and automating business intelligence workflows"
+      description: [
+        "Architected and deployed a highly scalable, parallelized data ingestion pipeline using Python, Selenium, and Apache Airflow, processing over 2 million data points daily.",
+        "Engineered an enterprise-grade agentic chatbot utilizing RAG to autonomously resolve complex queries, driving the transition to fully automated L1 helpdesk operations.",
+        "Spearheaded the development of an LLM-based content moderation system via FastAPI, projected to reduce manual Quality Control workload by 70%.",
+        "Engineered a scheduled payment extraction pipeline using Apache Airflow and LLMs to autonomously parse 400+ customer service emails weekly.",
+        "Designed and deployed BI dashboards using Apache Superset, featuring real-time analytics and an anomaly detection system to monitor transactions."
+      ]
     },
     {
       title: "Data Scientist",
       company: "Mbiz.co.id",
       location: "Jakarta, Indonesia",
       period: "Oct 2023 - Mar 2025",
-      description: "Leveraging LLM, OCR, Object Detection (Comp. Vision), text-classification (NLP), and rule-based approches for automating document processing."
+      description: [
+        "Developed and containerized a document verification microservice integrating LLMs and OCR using Docker and Apache Airflow, accelerating speeds by 10x.",
+        "Designed and deployed an intelligent ML scoring algorithm to automate task routing, boosting operational efficiency by approximately 70%.",
+        "Streamlined customer service operations by integrating NLP text classification and CV-based signature detection, reducing Average Handling Time (AHT) by 20%."
+      ]
     },
     {
-      title: "R&D Engineer (Machine Learning)",
+      title: "Research & Development Engineer (Machine Learning)",
       company: "Sistem Integrasi Mandiri",
       location: "Jakarta, Indonesia",
-      period: "Oct 2023 - Mar 2025",
-      description: "Building internal generative AI-chatbot, developing object detection model to detect people in restricted area, and researching the implementation of time series forecasting for server maintenance."
+      period: "Nov 2022 - Oct 2023",
+      description: [
+        "Trained and deployed a custom YOLO-based object detection model for real-time surveillance, achieving over 70% Precision, Recall, and mAP@0.5.",
+        "Built a multivariate time-series forecasting model utilizing LSTM (PyTorch) to predict server temperature anomalies for proactive maintenance.",
+        "Pioneered an internal LLM-powered knowledge base using locally hosted Llama models and ChromaDB to streamline access to maintenance guidelines."
+      ]
     }
   ];
 
@@ -164,9 +178,14 @@ export default function LightProfessionalPortfolio() {
                     {exp.period}
                   </div>
                 </div>
-                <p className="text-zinc-500 leading-relaxed font-light italic max-w-3xl">
-                  {exp.description}
-                </p>
+                <ul className="space-y-3">
+                  {exp.description.map((bullet, i) => (
+                    <li key={i} className="text-zinc-500 leading-relaxed font-light italic max-w-3xl flex gap-3">
+                      <span className="text-emerald-500 mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-emerald-500/20 border border-emerald-500/50"></span>
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
