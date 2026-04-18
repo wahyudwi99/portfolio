@@ -55,7 +55,7 @@ export default function ConvolutionalAutoencoder() {
                 The encoder consists of custom convolutional layers (64 and 256 channels), while the decoder uses ConvTranspose2d layers to reconstruct the image.
             </p>
             <div className="rounded-3xl overflow-hidden bg-white shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-zinc-200/50 p-4 md:p-8">
-              <Image src="/images/convolutional_autoencoder/image_1.png" alt="Full Architecture" width={1200} height={400} className="w-full h-auto rounded-xl"/> 
+              <Image src="/portfolio/images/convolutional_autoencoder/image_1.png" alt="Full Architecture" width={1200} height={400} className="w-full h-auto rounded-xl"/> 
             </div>
           </section>
 
@@ -70,12 +70,12 @@ export default function ConvolutionalAutoencoder() {
                     After 50 epochs, the reconstruction loss (calculated via Mean Absolute Error) decreased significantly. The decoder successfully reconstructs images from the compressed latent space.
                 </p>
                 <div className="rounded-2xl overflow-hidden border border-zinc-200">
-                  <Image src="/images/convolutional_autoencoder/image_2.png" alt="Reconstruction Loss" width={600} height={400} className="w-full h-auto"/>
+                  <Image src="/portfolio/images/convolutional_autoencoder/image_2.png" alt="Reconstruction Loss" width={600} height={400} className="w-full h-auto"/>
                 </div>
               </div>
               <div className="space-y-4">
-                <Image src="/images/convolutional_autoencoder/image_3.png" alt="Result 1" width={400} height={300} className="rounded-2xl border border-zinc-200 w-full"/>
-                <Image src="/images/convolutional_autoencoder/image_4.png" alt="Result 2" width={400} height={300} className="rounded-2xl border border-zinc-200 w-full"/>
+                <Image src="/portfolio/images/convolutional_autoencoder/image_3.png" alt="Result 1" width={400} height={300} className="rounded-2xl border border-zinc-200 w-full"/>
+                <Image src="/portfolio/images/convolutional_autoencoder/image_4.png" alt="Result 2" width={400} height={300} className="rounded-2xl border border-zinc-200 w-full"/>
               </div>
             </div>
           </section>

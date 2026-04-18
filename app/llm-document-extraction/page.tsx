@@ -67,7 +67,7 @@ export default function LLMDocumentExtraction() {
             </div>
             <div className="rounded-3xl overflow-hidden bg-white shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-zinc-200/50 p-4 md:p-8">
               <Image 
-                src="/images/LLM_Document_Extraction/LLM_Docs_Extraction.png" 
+                src="/portfolio/images/LLM_Document_Extraction/LLM_Docs_Extraction.png" 
                 alt="LLM Document Extraction Workflow" 
                 width={1200} 
                 height={675} 

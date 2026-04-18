@@ -65,10 +65,10 @@ export default function FraudDetection() {
                 We compared several models including Random Forest, Decision Trees, Logistic Regression, and XGBoost. Random Forest and XGBoost showed the highest precision and recall for fraud detection.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <Image src="/images/fraud_detection/image_1.png" alt="RF Result" width={300} height={200} className="rounded-xl border border-zinc-200 shadow-sm"/> 
-              <Image src="/images/fraud_detection/image_2.png" alt="DT Result" width={300} height={200} className="rounded-xl border border-zinc-200 shadow-sm"/> 
-              <Image src="/images/fraud_detection/image_3.png" alt="LR Result" width={300} height={200} className="rounded-xl border border-zinc-200 shadow-sm"/> 
-              <Image src="/images/fraud_detection/image_4.png" alt="XGB Result" width={300} height={200} className="rounded-xl border border-zinc-200 shadow-sm"/> 
+              <Image src="/portfolio/images/fraud_detection/image_1.png" alt="RF Result" width={300} height={200} className="rounded-xl border border-zinc-200 shadow-sm"/> 
+              <Image src="/portfolio/images/fraud_detection/image_2.png" alt="DT Result" width={300} height={200} className="rounded-xl border border-zinc-200 shadow-sm"/> 
+              <Image src="/portfolio/images/fraud_detection/image_3.png" alt="LR Result" width={300} height={200} className="rounded-xl border border-zinc-200 shadow-sm"/> 
+              <Image src="/portfolio/images/fraud_detection/image_4.png" alt="XGB Result" width={300} height={200} className="rounded-xl border border-zinc-200 shadow-sm"/> 
             </div>
           </section>
         </div>
