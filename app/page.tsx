@@ -42,13 +42,6 @@ export default function LightProfessionalPortfolio() {
       tag: "Engineering Project"
     },
     {
-      year: "2026",
-      title: "Mini Transformers: Deep Dive into Architectural Design",
-      description: "Build transformers block from scratch which covers the fundamental concept of Multi-Head Attention mechanism and Feed Forward Network.",
-      link: "#",
-      tag: "Research"
-    },
-    {
       year: "2025",
       title: "Convolution Autoencoder: Image Compression Into Latent Space",
       description: "Image compression mechanism that compress image to latent space (low kernel size), then convert back to original space with low reconstruction loss.",
