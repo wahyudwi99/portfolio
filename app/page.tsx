@@ -30,7 +30,7 @@ export default function LightProfessionalPortfolio() {
     {
       year: "2026",
       title: "Agentic Chatbot RAG for Enterprise Knowledge Base",
-      description: "Production-ready RAG system with automated Apache Airflow pipelines and backend orchestration for data integrity.",
+      description: "Decoupled, event-driven RAG pipeline isolating I/O-bound retrieval from compute-bound inference to minimize latency.",
       link: "/agentic-rag",
       tag: "Engineering Project"
     },

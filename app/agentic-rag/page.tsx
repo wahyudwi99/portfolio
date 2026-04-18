@@ -46,7 +46,7 @@ export default function AgenticChatbotRAG() {
               <div className="h-px flex-1 bg-zinc-200"></div>
             </div>
             <p className="text-zinc-500 leading-relaxed font-light text-lg text-justify">
-              Architected an automated document extraction and synchronization pipeline centered on a Backend Orchestrator and managed by Apache Airflow. This design decouples the scheduled ingestion of raw company data from the intensive LLM-driven analysis and verification logic. By utilizing a cron-based scheduler to drive REST API interactions, the system ensures consistent throughput while the orchestrator enforces strict verification rules before data persistence. This separation of concerns optimizes PostgreSQL write-operations and maintains data integrity between the source system and the analytical layer, effectively reducing processing overhead and ensuring reliable end-to-end data synchronization.
+              Architected a decoupled, event-driven RAG pipeline centralized around a Backend Orchestrator. This design intentionally isolates I/O-bound vector retrieval operations (embedding extraction and pgvector semantic search) from compute-bound LLM generative inference. This strict separation of concerns mitigates network thread blocking, optimizes context-window memory footprint, and reduces end-to-end latency during high-volume inference.
             </p>
           </section>
 
