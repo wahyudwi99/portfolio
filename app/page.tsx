@@ -82,7 +82,7 @@ export default function LightProfessionalPortfolio() {
             <a href="#projects" className="hover:text-emerald-600 transition-colors">Projects</a>
             <a href="#contact" className="hover:text-emerald-600 transition-colors">Contact</a>
           </div>
-          <a href="https://drive.google.com/file/d/1E-aOcafcAyOiCLyE4QNSfnEMPH6SOsR0/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-[10px] font-black uppercase tracking-widest border border-zinc-900 px-6 py-2 rounded-full text-zinc-900 hover:bg-zinc-900 hover:text-white transition-all">
+          <a href="https://drive.google.com/drive/u/1/folders/1l1HTae6N2fsWzaiQeGfts4zlyCqQzrQ6" target="_blank" rel="noopener noreferrer" className="text-[10px] font-black uppercase tracking-widest border border-zinc-900 px-6 py-2 rounded-full text-zinc-900 hover:bg-zinc-900 hover:text-white transition-all">
             Resume
           </a>
         </div>
