@@ -8,35 +8,21 @@ export default function LightProfessionalPortfolio() {
       company: "Mbiz.co.id",
       location: "Jakarta, Indonesia",
       period: "Mar 2025 - present",
-      description: [
-        "Architected and deployed a highly scalable, parallelized data ingestion pipeline using Python, Selenium, and Apache Airflow, processing over 2 million data points daily.",
-        "Engineered an enterprise-grade agentic chatbot utilizing RAG to autonomously resolve complex queries, driving the transition to fully automated L1 helpdesk operations.",
-        "Spearheaded the development of an LLM-based content moderation system via FastAPI, projected to reduce manual Quality Control workload by 70%.",
-        "Engineered a scheduled payment extraction pipeline using Apache Airflow and LLMs to autonomously parse 400+ customer service emails weekly.",
-        "Designed and deployed BI dashboards using Apache Superset, featuring real-time analytics and an anomaly detection system to monitor transactions."
-      ]
+      description: "Architected a scalable, parallelized pipeline using Python and Airflow processing 2M+ daily data points, while engineering an enterprise-grade agentic RAG chatbot for L1 helpdesk automation. Spearheaded LLM-based content moderation via FastAPI to reduce QC workload by 70%, deployed automated payment extraction pipelines for weekly CS emails, and designed real-time BI dashboards using Apache Superset to accelerate sales decision-making and monitor transaction anomalies."
     },
     {
       title: "Data Scientist",
       company: "Mbiz.co.id",
       location: "Jakarta, Indonesia",
       period: "Oct 2023 - Mar 2025",
-      description: [
-        "Developed and containerized a document verification microservice integrating LLMs and OCR using Docker and Apache Airflow, accelerating speeds by 10x.",
-        "Designed and deployed an intelligent ML scoring algorithm to automate task routing, boosting operational efficiency by approximately 70%.",
-        "Streamlined customer service operations by integrating NLP text classification and CV-based signature detection, reducing Average Handling Time (AHT) by 20%."
-      ]
+      description: "Developed containerized LLM and OCR microservices using Docker and Airflow, achieving a 10x speed increase and minimizing verification errors. Designed intelligent ML scoring algorithms for 70% better task routing efficiency and integrated NLP text classification with CV-based signature detection to reduce Average Handling Time (AHT) by 20%, significantly streamlining core customer service operations."
     },
     {
       title: "Research & Development Engineer (Machine Learning)",
       company: "Sistem Integrasi Mandiri",
       location: "Jakarta, Indonesia",
       period: "Nov 2022 - Oct 2023",
-      description: [
-        "Trained and deployed a custom YOLO-based object detection model for real-time surveillance, achieving over 70% Precision, Recall, and mAP@0.5.",
-        "Built a multivariate time-series forecasting model utilizing LSTM (PyTorch) to predict server temperature anomalies for proactive maintenance.",
-        "Pioneered an internal LLM-powered knowledge base using locally hosted Llama models and ChromaDB to streamline access to maintenance guidelines."
-      ]
+      description: "Trained and deployed custom YOLO-based object detection for real-time video surveillance, achieving over 70% mAP@0.5. Built multivariate LSTM-based forecasting models for proactive server maintenance and pioneered an internal knowledge base by customizing locally hosted Llama models with ChromaDB and LangChain to create a highly accurate RAG pipeline for operational guidelines."
     }
   ];
 
@@ -178,14 +164,9 @@ export default function LightProfessionalPortfolio() {
                     {exp.period}
                   </div>
                 </div>
-                <ul className="space-y-3">
-                  {exp.description.map((bullet, i) => (
-                    <li key={i} className="text-zinc-500 leading-relaxed font-light italic max-w-3xl flex gap-3">
-                      <span className="text-emerald-500 mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-emerald-500/20 border border-emerald-500/50"></span>
-                      {bullet}
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-zinc-500 leading-relaxed font-light italic max-w-3xl text-justify">
+                  {exp.description}
+                </p>
               </div>
             ))}
           </div>
