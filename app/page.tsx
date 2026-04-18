@@ -29,10 +29,10 @@ export default function LightProfessionalPortfolio() {
   const projects = [
     {
       year: "2026",
-      title: "Agentic RAG for Enterprise Knowledge Base",
-      description: "Advanced Retrieval-Augmented Generation system using an agentic approach with self-correction and multi-step reasoning.",
+      title: "Agentic Chatbot RAG for Enterprise Knowledge Base",
+      description: "Production-ready RAG system with automated Apache Airflow pipelines and backend orchestration for data integrity.",
       link: "/agentic-rag",
-      tag: "LLM & Agents"
+      tag: "Engineering Project"
     },
     {
       year: "2026",

@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function AgenticRAG() {
+export default function AgenticChatbotRAG() {
   return (
     <div className="min-h-screen bg-[#f8f9fa] text-zinc-600 font-sans selection:bg-emerald-100 selection:text-emerald-900">
       {/* Soft Ambient Tint */}
@@ -25,16 +25,16 @@ export default function AgenticRAG() {
         {/* Header */}
         <div className="mb-16">
           <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 text-[10px] font-black tracking-[0.2em] uppercase mb-8">
-            Research Project 2026
+            Engineering Project 2026
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-zinc-900 tracking-tighter leading-[1.1] mb-8">
-            Agentic RAG for <br />
+            Agentic Chatbot RAG for <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-800 to-emerald-600">
               Enterprise Knowledge Base
             </span>
           </h1>
           <p className="text-lg md:text-xl text-zinc-500 leading-relaxed font-light italic">
-            Building advanced Retrieval-Augmented Generation systems with autonomous reasoning and self-correction capabilities.
+            Architecting production-ready RAG systems with automated synchronization pipelines and agentic reasoning.
           </p>
         </div>
 
@@ -42,11 +42,11 @@ export default function AgenticRAG() {
         <div className="space-y-24">
           <section>
             <div className="flex items-center gap-4 mb-8">
-              <h2 className="text-2xl font-bold text-zinc-900 tracking-tight italic">The Objective</h2>
+              <h2 className="text-2xl font-bold text-zinc-900 tracking-tight italic">System Highlight</h2>
               <div className="h-px flex-1 bg-zinc-200"></div>
             </div>
-            <p className="text-zinc-500 leading-relaxed font-light text-lg">
-              This research aims to build an advanced Retrieval-Augmented Generation (RAG) system using an agentic approach. Unlike traditional RAG, Agentic RAG can reason about the retrieval process, decide when to search, evaluate the relevance of retrieved documents, and even perform multi-step reasoning to provide more accurate and context-aware answers.
+            <p className="text-zinc-500 leading-relaxed font-light text-lg text-justify">
+              Architected an automated document extraction and synchronization pipeline centered on a Backend Orchestrator and managed by Apache Airflow. This design decouples the scheduled ingestion of raw company data from the intensive LLM-driven analysis and verification logic. By utilizing a cron-based scheduler to drive REST API interactions, the system ensures consistent throughput while the orchestrator enforces strict verification rules before data persistence. This separation of concerns optimizes PostgreSQL write-operations and maintains data integrity between the source system and the analytical layer, effectively reducing processing overhead and ensuring reliable end-to-end data synchronization.
             </p>
           </section>
 
@@ -56,12 +56,12 @@ export default function AgenticRAG() {
               <div className="h-px flex-1 bg-zinc-200"></div>
             </div>
             <p className="text-zinc-500 leading-relaxed font-light mb-12">
-              The architecture involves an LLM-based agent that orchestrates various tools including vector databases, search engines, and document processors. The agent uses a feedback loop to refine its search queries and validate the answers against the source documents.
+              The architecture involves an LLM-based agent that orchestrates various tools including vector databases, search engines, and document processors. The integration of Apache Airflow ensures that the knowledge base remains synchronized with the primary company data sources.
             </p>
             <div className="rounded-3xl overflow-hidden bg-white shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-zinc-200/50 p-4 md:p-8">
               <Image 
                 src="/images/Agentic_RAG/Agentic_RAG.png" 
-                alt="Agentic RAG Architecture" 
+                alt="Agentic Chatbot RAG Architecture" 
                 width={1200} 
                 height={675} 
                 className="w-full h-auto rounded-xl"
@@ -77,9 +77,10 @@ export default function AgenticRAG() {
               </div>
               <ul className="space-y-6">
                 {[
-                  { title: "Self-Correction", desc: "Agent can identify insufficient retrieval and re-query." },
-                  { title: "Multi-Source", desc: "Integrates PDFs, markdown, and live web sources." },
-                  { title: "Reasoning Loops", desc: "Uses Chain-of-Thought for complex query handling." }
+                  { title: "Automated Pipeline", desc: "Apache Airflow managed ingestion and synchronization." },
+                  { title: "Strict Verification", desc: "Backend Orchestrator enforces rules before persistence." },
+                  { title: "Decoupled Logic", desc: "Separation of ingestion and intensive LLM analysis." },
+                  { title: "Self-Correction", desc: "Agentic reasoning for improved retrieval accuracy." }
                 ].map((item, i) => (
                   <li key={i} className="flex gap-4">
                     <span className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-[10px] font-bold shrink-0 mt-1">✓</span>
@@ -97,7 +98,7 @@ export default function AgenticRAG() {
                 <div className="h-px flex-1 bg-zinc-200"></div>
               </div>
               <div className="flex flex-wrap gap-3">
-                {["LangGraph", "LlamaIndex", "Pinecone", "GPT-4o", "Python", "FastAPI"].map((tech, i) => (
+                {["Apache Airflow", "PostgreSQL", "LangGraph", "Pinecone", "GPT-4o", "REST API", "Python"].map((tech, i) => (
                   <span key={i} className="px-4 py-2 rounded-full bg-white border border-zinc-200 text-zinc-500 text-xs font-medium">{tech}</span>
                 ))}
               </div>
