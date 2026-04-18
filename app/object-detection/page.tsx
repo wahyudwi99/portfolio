@@ -78,7 +78,7 @@ export default function ObjectDetection() {
       <footer className="max-w-6xl mx-auto px-8 py-16 flex justify-between items-center text-[10px] font-black tracking-[0.3em] text-zinc-400 uppercase border-t border-zinc-200">
         <p>© 2026 Wahyu Dwi Nugraha</p>
         <div className="flex gap-10">
-          <a href="#" className="hover:text-zinc-900 transition-colors">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/wahyudwinugraha/" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 transition-colors">LinkedIn</a>
           <a href="#" className="hover:text-zinc-900 transition-colors">GitHub</a>
         </div>
       </footer>
