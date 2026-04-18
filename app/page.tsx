@@ -127,11 +127,8 @@ export default function LightProfessionalPortfolio() {
                 <img 
                   src="/images/Personal_Photo/Personal Photo.jpg" 
                   alt="Wahyu Dwi Nugraha" 
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-full object-cover transition-all duration-700"
                 />
-              </div>
-              <div className="absolute top-6 -right-4 z-20 bg-zinc-900 text-white text-[10px] font-black px-4 py-1.5 rounded-full shadow-xl uppercase tracking-widest border-2 border-white">
-                ML Lead
               </div>
             </div>
           </div>
