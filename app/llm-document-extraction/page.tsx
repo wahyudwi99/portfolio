@@ -25,7 +25,7 @@ export default function LLMDocumentExtraction() {
         {/* Header */}
         <div className="mb-16">
           <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 text-[10px] font-black tracking-[0.2em] uppercase mb-8">
-            Generative AI Project 2026
+            Engineering Project 2026
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-zinc-900 tracking-tighter leading-[1.1] mb-8">
             LLM-Powered <br />
@@ -34,7 +34,7 @@ export default function LLMDocumentExtraction() {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-zinc-500 leading-relaxed font-light italic">
-            Automating structured data extraction from unstructured documents using zero-shot and few-shot learning capabilities.
+            Developed and containerized a robust document verification microservice accelerating processing speeds by 10x.
           </p>
         </div>
 
@@ -46,7 +46,17 @@ export default function LLMDocumentExtraction() {
               <div className="h-px flex-1 bg-zinc-200"></div>
             </div>
             <p className="text-zinc-500 leading-relaxed font-light text-lg text-justify">
-                Automating the extraction of structured data from unstructured documents like invoices, receipts, and contracts. This project leverages Large Language Models (LLMs) combined with OCR technologies to achieve high accuracy in zero-shot or few-shot scenarios, reducing the need for template-based extraction.
+                Developed and containerized a robust document verification microservice integrating LLMs and Optical Character Recognition (OCR) using Docker and Apache Airflow, accelerating processing speeds by 10x and minimizing verification errors. This project leverages Large Language Models (LLMs) combined with OCR technologies to achieve high accuracy in zero-shot or few-shot scenarios, reducing the need for template-based extraction.
+            </p>
+          </section>
+
+          <section>
+            <div className="flex items-center gap-4 mb-8">
+              <h2 className="text-2xl font-bold text-zinc-900 tracking-tight italic">System Highlight</h2>
+              <div className="h-px flex-1 bg-zinc-200"></div>
+            </div>
+            <p className="text-zinc-500 leading-relaxed font-light text-lg text-justify">
+              Architected an automated document extraction and synchronization pipeline centered on a Backend Orchestrator and managed by Apache Airflow. This design decouples the scheduled ingestion of raw company data from the intensive LLM-driven analysis and verification logic. By utilizing a cron-based scheduler to drive REST API interactions, the system ensures consistent throughput while the orchestrator enforces strict verification rules before data persistence. This separation of concerns optimizes PostgreSQL write-operations and maintains data integrity between the source system and the analytical layer, effectively reducing processing overhead and ensuring reliable end-to-end data synchronization.
             </p>
           </section>
 
@@ -55,9 +65,6 @@ export default function LLMDocumentExtraction() {
               <h2 className="text-2xl font-bold text-zinc-900 tracking-tight italic">Workflow Visualization</h2>
               <div className="h-px flex-1 bg-zinc-200"></div>
             </div>
-            <p className="text-zinc-500 leading-relaxed font-light mb-12">
-                The process starts with OCR to convert images/PDFs into text, followed by an LLM that parses the text into a predefined JSON schema. We use prompt engineering and fine-tuning to handle various document layouts and languages.
-            </p>
             <div className="rounded-3xl overflow-hidden bg-white shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-zinc-200/50 p-4 md:p-8">
               <Image 
                 src="/images/LLM_Document_Extraction/LLM_Docs_Extraction.png" 
@@ -77,9 +84,10 @@ export default function LLMDocumentExtraction() {
               </div>
               <ul className="space-y-6">
                 {[
-                  { title: "OCR Integration", desc: "Support for Tesseract, Azure AI Vision, and AWS Textract." },
-                  { title: "Schema Validation", desc: "Pydantic ensures data conforms to structured JSON format." },
-                  { title: "Zero-Shot Extraction", desc: "Handle new document types without retraining." }
+                  { title: "10x Performance", desc: "Significant acceleration in document processing speeds." },
+                  { title: "Microservice Design", desc: "Containerized with Docker for robust deployment." },
+                  { title: "Airflow Managed", desc: "Scheduled ingestion and automated sync pipelines." },
+                  { title: "Error Minimization", desc: "Strict verification rules enforced by orchestrator." }
                 ].map((item, i) => (
                   <li key={i} className="flex gap-4">
                     <span className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-[10px] font-bold shrink-0 mt-1">✓</span>
@@ -97,7 +105,7 @@ export default function LLMDocumentExtraction() {
                 <div className="h-px flex-1 bg-zinc-200"></div>
               </div>
               <div className="flex flex-wrap gap-3">
-                {["GPT-4o", "Claude 3.5", "Llama 3", "Python", "Pydantic", "Azure AI Vision"].map((tech, i) => (
+                {["Docker", "Apache Airflow", "GPT-4o", "Claude 3.5", "Python", "PostgreSQL", "Azure AI Vision"].map((tech, i) => (
                   <span key={i} className="px-4 py-2 rounded-full bg-white border border-zinc-200 text-zinc-500 text-xs font-medium">{tech}</span>
                 ))}
               </div>

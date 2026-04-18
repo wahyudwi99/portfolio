@@ -37,9 +37,9 @@ export default function LightProfessionalPortfolio() {
     {
       year: "2026",
       title: "LLM-Powered Document Information Extraction",
-      description: "Automating structured data extraction from unstructured documents using LLMs and OCR with zero-shot capabilities.",
+      description: "Containerized document verification microservice using Docker and Airflow, achieving 10x processing speed improvements.",
       link: "/llm-document-extraction",
-      tag: "Generative AI"
+      tag: "Engineering Project"
     },
     {
       year: "2026",
