@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function ObjectDetection() {
@@ -50,9 +51,12 @@ export default function ObjectDetection() {
               <h2 className="text-2xl font-bold text-zinc-900 tracking-tight italic">Modeling & Training</h2>
               <div className="h-px flex-1 bg-zinc-200"></div>
             </div>
-            <p className="text-zinc-500 leading-relaxed font-light">
+            <p className="text-zinc-500 leading-relaxed font-light mb-12">
                 We utilized YOLOv8 and trained the model using an NVIDIA RTX 3060 Ti. The model was trained for 50 epochs, achieving stable performance metrics across detection categories.
             </p>
+            <div className="rounded-3xl overflow-hidden bg-white shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-zinc-200/50 p-4 md:p-8">
+              <Image src="/images/object_detection/image_3.png" alt="YOLO Training Result" width={1200} height={600} className="w-full h-auto rounded-xl"/> 
+            </div>
           </section>
 
           <section>
@@ -60,9 +64,13 @@ export default function ObjectDetection() {
               <h2 className="text-2xl font-bold text-zinc-900 tracking-tight italic">Inference & Validation</h2>
               <div className="h-px flex-1 bg-zinc-200"></div>
             </div>
-            <p className="text-zinc-500 leading-relaxed font-light">
+            <p className="text-zinc-500 leading-relaxed font-light mb-12">
                 Validation images show the model's ability to generate precise bounding boxes for objects in thermal frames, demonstrating robust detection even in high-contrast or noisy thermal backgrounds.
             </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <Image src="/images/object_detection/image_2.png" alt="Inference Result 1" width={500} height={400} className="rounded-2xl border border-zinc-200 shadow-sm w-full"/> 
+              <Image src="/images/object_detection/image_1.png" alt="Inference Result 2" width={500} height={400} className="rounded-2xl border border-zinc-200 shadow-sm w-full"/>
+            </div>
           </section>
         </div>
       </main>

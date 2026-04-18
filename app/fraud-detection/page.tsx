@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function FraudDetection() {
@@ -60,9 +61,15 @@ export default function FraudDetection() {
               <h2 className="text-2xl font-bold text-zinc-900 tracking-tight italic">Modeling & Performance</h2>
               <div className="h-px flex-1 bg-zinc-200"></div>
             </div>
-            <p className="text-zinc-500 leading-relaxed font-light">
+            <p className="text-zinc-500 leading-relaxed font-light mb-12">
                 We compared several models including Random Forest, Decision Trees, Logistic Regression, and XGBoost. Random Forest and XGBoost showed the highest precision and recall for fraud detection.
             </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <Image src="/images/fraud_detection/image_1.png" alt="RF Result" width={300} height={200} className="rounded-xl border border-zinc-200 shadow-sm"/> 
+              <Image src="/images/fraud_detection/image_2.png" alt="DT Result" width={300} height={200} className="rounded-xl border border-zinc-200 shadow-sm"/> 
+              <Image src="/images/fraud_detection/image_3.png" alt="LR Result" width={300} height={200} className="rounded-xl border border-zinc-200 shadow-sm"/> 
+              <Image src="/images/fraud_detection/image_4.png" alt="XGB Result" width={300} height={200} className="rounded-xl border border-zinc-200 shadow-sm"/> 
+            </div>
           </section>
         </div>
       </main>

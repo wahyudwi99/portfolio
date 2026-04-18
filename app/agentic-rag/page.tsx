@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function AgenticChatbotRAG() {
@@ -51,10 +52,29 @@ export default function AgenticChatbotRAG() {
 
           <section>
             <div className="flex items-center gap-4 mb-8">
-              <h2 className="text-2xl font-bold text-zinc-900 tracking-tight italic">Key Features</h2>
+              <h2 className="text-2xl font-bold text-zinc-900 tracking-tight italic">System Architecture</h2>
               <div className="h-px flex-1 bg-zinc-200"></div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <p className="text-zinc-500 leading-relaxed font-light mb-12">
+              The architecture involves an LLM-based agent that orchestrates various tools including vector databases, search engines, and document processors. The integration of Apache Airflow ensures that the knowledge base remains synchronized with the primary company data sources.
+            </p>
+            <div className="rounded-3xl overflow-hidden bg-white shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-zinc-200/50 p-4 md:p-8">
+              <Image 
+                src="/images/Agentic_RAG/Agentic_RAG.png" 
+                alt="Agentic Chatbot RAG Architecture" 
+                width={1200} 
+                height={675} 
+                className="w-full h-auto rounded-xl"
+              />
+            </div>
+          </section>
+
+          <section className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+              <div className="flex items-center gap-4 mb-8">
+                <h2 className="text-2xl font-bold text-zinc-900 tracking-tight italic">Key Features</h2>
+                <div className="h-px flex-1 bg-zinc-200"></div>
+              </div>
               <ul className="space-y-6">
                 {[
                   { title: "Automated Pipeline", desc: "Apache Airflow managed ingestion and synchronization." },
@@ -71,12 +91,16 @@ export default function AgenticChatbotRAG() {
                   </li>
                 ))}
               </ul>
-              <div>
-                <div className="flex flex-wrap gap-3">
-                  {["Apache Airflow", "PostgreSQL", "LangGraph", "Pinecone", "GPT-4o", "REST API", "Python"].map((tech, i) => (
-                    <span key={i} className="px-4 py-2 rounded-full bg-white border border-zinc-200 text-zinc-500 text-xs font-medium">{tech}</span>
-                  ))}
-                </div>
+            </div>
+            <div>
+              <div className="flex items-center gap-4 mb-8">
+                <h2 className="text-2xl font-bold text-zinc-900 tracking-tight italic">Tech Stack</h2>
+                <div className="h-px flex-1 bg-zinc-200"></div>
+              </div>
+              <div className="flex flex-wrap gap-3">
+                {["Apache Airflow", "PostgreSQL", "LangGraph", "Pinecone", "GPT-4o", "REST API", "Python"].map((tech, i) => (
+                  <span key={i} className="px-4 py-2 rounded-full bg-white border border-zinc-200 text-zinc-500 text-xs font-medium">{tech}</span>
+                ))}
               </div>
             </div>
           </section>
