@@ -40,10 +40,10 @@ function users() {
                         Logistic Regression, and XGB Classifier. The detail result on each model is shown below.
                     </p>
                     <div className="flex flex-wrap gap-3 justify-center">
-                        <Image src="./images/fraud_detection/image_1.png" alt="Random Forest Classifer Result" width={300} height={80} className="mt-5"/> 
-                        <Image src="./images/fraud_detection/image_2.png" alt="Decision Tree Classifier Result" width={300} height={80} className="mt-5"/> 
-                        <Image src="./images/fraud_detection/image_3.png" alt="Logistic Regression Result" width={300} height={80} className="mt-5"/> 
-                        <Image src="./images/fraud_detection/image_4.png" alt="XGBoost Classifier Result" width={300} height={80} className="mt-5"/> 
+                        <Image src="/images/fraud_detection/image_1.png" alt="Random Forest Classifer Result" width={300} height={80} className="mt-5"/> 
+                        <Image src="/images/fraud_detection/image_2.png" alt="Decision Tree Classifier Result" width={300} height={80} className="mt-5"/> 
+                        <Image src="/images/fraud_detection/image_3.png" alt="Logistic Regression Result" width={300} height={80} className="mt-5"/> 
+                        <Image src="/images/fraud_detection/image_4.png" alt="XGBoost Classifier Result" width={300} height={80} className="mt-5"/> 
                     </div>
                     <p className="mt-2 text-justify">
                         Based on training result above, we can see Random Forest Classifier showed good score than others, followed by XGBoost Classifier.
