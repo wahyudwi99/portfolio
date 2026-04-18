@@ -78,9 +78,8 @@ export default function AgenticChatbotRAG() {
               <ul className="space-y-6">
                 {[
                   { title: "Automated Pipeline", desc: "Apache Airflow managed ingestion and synchronization." },
-                  { title: "Strict Verification", desc: "Backend Orchestrator enforces rules before persistence." },
                   { title: "Decoupled Logic", desc: "Separation of ingestion and intensive LLM analysis." },
-                  { title: "Self-Correction", desc: "Agentic reasoning for improved retrieval accuracy." }
+                  { title: "Strict Retrieval Process", desc: "Use only vector knowledge with strong correlation." }
                 ].map((item, i) => (
                   <li key={i} className="flex gap-4">
                     <span className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-[10px] font-bold shrink-0 mt-1">✓</span>
@@ -98,7 +97,7 @@ export default function AgenticChatbotRAG() {
                 <div className="h-px flex-1 bg-zinc-200"></div>
               </div>
               <div className="flex flex-wrap gap-3">
-                {["Apache Airflow", "PostgreSQL", "LangGraph", "Pinecone", "GPT-4o", "REST API", "Python"].map((tech, i) => (
+                {["Apache Airflow", "PostgreSQL", "Pg Vector", "Gemini API", "REST API", "Python"].map((tech, i) => (
                   <span key={i} className="px-4 py-2 rounded-full bg-white border border-zinc-200 text-zinc-500 text-xs font-medium">{tech}</span>
                 ))}
               </div>

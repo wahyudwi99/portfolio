@@ -46,7 +46,7 @@ export default function LLMDocumentExtraction() {
               <div className="h-px flex-1 bg-zinc-200"></div>
             </div>
             <p className="text-zinc-500 leading-relaxed font-light text-lg text-justify">
-                Developed and containerized a robust document verification microservice integrating LLMs and Optical Character Recognition (OCR) using Docker and Apache Airflow, accelerating processing speeds by 10x and minimizing verification errors. This project leverages Large Language Models (LLMs) combined with OCR technologies to achieve high accuracy in zero-shot or few-shot scenarios, reducing the need for template-based extraction.
+                Developed and containerized a robust document verification microservice powered by multimodal LLMs using Docker and Apache Airflow, accelerating processing speeds by 10x and minimizing verification errors. This approach achieves high extraction accuracy in zero-shot or few-shot scenarios, completely eliminating the reliance on traditional template-based methods.
             </p>
           </section>
 
@@ -105,7 +105,7 @@ export default function LLMDocumentExtraction() {
                 <div className="h-px flex-1 bg-zinc-200"></div>
               </div>
               <div className="flex flex-wrap gap-3">
-                {["Docker", "Apache Airflow", "GPT-4o", "Claude 3.5", "Python", "PostgreSQL", "Azure AI Vision"].map((tech, i) => (
+                {["Docker", "Apache Airflow", "Gemini API", "Python", "PostgreSQL"].map((tech, i) => (
                   <span key={i} className="px-4 py-2 rounded-full bg-white border border-zinc-200 text-zinc-500 text-xs font-medium">{tech}</span>
                 ))}
               </div>
