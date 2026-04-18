@@ -125,8 +125,8 @@ export default function LightProfessionalPortfolio() {
               <div className="absolute -inset-6 border border-emerald-100 rounded-full animate-[spin_15s_linear_infinite]"></div>
               <div className="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-[6px] border-white bg-white shadow-[0_20px_50px_rgba(0,0,0,0.1)] relative z-10">
                 <img 
-                  src="/api/placeholder/400/400" 
-                  alt="Profile" 
+                  src="/images/Personal_Photo/Personal Photo.jpg" 
+                  alt="Wahyu Dwi Nugraha" 
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 />
               </div>
