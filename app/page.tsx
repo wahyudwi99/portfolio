@@ -172,13 +172,6 @@ export default function LightProfessionalPortfolio() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24">
             {projects.map((project, index) => (
               <Link href={project.link} key={index} className="group block">
-                <div className="mb-6 overflow-hidden rounded-2xl bg-zinc-100 aspect-video relative">
-                    {/* Placeholder for project image */}
-                    <div className="absolute inset-0 flex items-center justify-center text-zinc-400 font-bold uppercase tracking-widest text-[10px]">
-                        {project.tag}
-                    </div>
-                    <div className="absolute inset-0 bg-emerald-600/0 group-hover:bg-emerald-600/10 transition-colors"></div>
-                </div>
                 <span className="text-emerald-600 text-[12px] font-black uppercase tracking-[0.2em] mb-4 block">{project.year}</span>
                 <h3 className="text-2xl font-bold text-zinc-900 mb-4 tracking-tight group-hover:text-emerald-600 transition-colors">{project.title}</h3>
                 <p className="text-zinc-500 leading-relaxed font-light italic text-sm">

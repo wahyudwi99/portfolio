@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 
 export default function LLMDocumentExtraction() {
@@ -58,22 +57,6 @@ export default function LLMDocumentExtraction() {
             <p className="text-zinc-500 leading-relaxed font-light text-lg text-justify">
               Architected an automated document extraction and synchronization pipeline centered on a Backend Orchestrator and managed by Apache Airflow. This design decouples the scheduled ingestion of raw company data from the intensive LLM-driven analysis and verification logic. By utilizing a cron-based scheduler to drive REST API interactions, the system ensures consistent throughput while the orchestrator enforces strict verification rules before data persistence. This separation of concerns optimizes PostgreSQL write-operations and maintains data integrity between the source system and the analytical layer, effectively reducing processing overhead and ensuring reliable end-to-end data synchronization.
             </p>
-          </section>
-
-          <section>
-            <div className="flex items-center gap-4 mb-8">
-              <h2 className="text-2xl font-bold text-zinc-900 tracking-tight italic">Workflow Visualization</h2>
-              <div className="h-px flex-1 bg-zinc-200"></div>
-            </div>
-            <div className="rounded-3xl overflow-hidden bg-white shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-zinc-200/50 p-4 md:p-8">
-              <Image 
-                src="/images/LLM_Document_Extraction/LLM_Docs_Extraction.png" 
-                alt="LLM Document Extraction Workflow" 
-                width={1200} 
-                height={675} 
-                className="w-full h-auto rounded-xl"
-              />
-            </div>
           </section>
 
           <section className="grid grid-cols-1 md:grid-cols-2 gap-12">
