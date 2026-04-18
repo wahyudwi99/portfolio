@@ -78,7 +78,7 @@ export default function FraudDetection() {
         <p>© 2026 Wahyu Dwi Nugraha</p>
         <div className="flex gap-10">
           <a href="https://www.linkedin.com/in/wahyudwinugraha/" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 transition-colors">LinkedIn</a>
-          <a href="#" className="hover:text-zinc-900 transition-colors">GitHub</a>
+          <a href="https://github.com/wahyudwi99" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 transition-colors">GitHub</a>
         </div>
       </footer>
     </div>
