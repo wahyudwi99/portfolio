@@ -65,7 +65,7 @@ export default function ObjectDetection() {
               <div className="h-px flex-1 bg-zinc-200"></div>
             </div>
             <p className="text-zinc-500 leading-relaxed font-light mb-12">
-                Validation images show the model's ability to generate precise bounding boxes for objects in thermal frames, demonstrating robust detection even in high-contrast or noisy thermal backgrounds.
+                Validation images show the model&apos;s ability to generate precise bounding boxes for objects in thermal frames, demonstrating robust detection even in high-contrast or noisy thermal backgrounds.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <Image src="/images/object_detection/image_2.png" alt="Inference Result 1" width={500} height={400} className="rounded-2xl border border-zinc-200 shadow-sm w-full"/> 

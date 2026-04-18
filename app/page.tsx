@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function LightProfessionalPortfolio() {
@@ -186,7 +187,7 @@ export default function LightProfessionalPortfolio() {
         <section id="contact" className="py-40">
           <div className="rounded-[48px] bg-zinc-900 py-24 px-12 flex flex-col items-center text-center text-white relative overflow-hidden">
             <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '32px 32px' }}></div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-10 tracking-tight relative z-10">Let's discuss the <br />next iteration.</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-10 tracking-tight relative z-10">Let&apos;s discuss the <br />next iteration.</h2>
             <a href="mailto:nugrahawd9@gmail.com" className="group text-2xl font-medium flex items-center gap-4 hover:text-emerald-400 transition-all border-b border-zinc-700 pb-2 relative z-10">
               nugrahawd9@gmail.com
               <span className="p-3 rounded-full bg-white text-zinc-900 group-hover:bg-emerald-500 group-hover:text-white transition-all">→</span>
@@ -201,6 +202,12 @@ export default function LightProfessionalPortfolio() {
         <div className="flex gap-10">
           <a href="https://www.linkedin.com/in/wahyudwinugraha/" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 transition-colors">LinkedIn</a>
           <a href="https://github.com/wahyudwi99" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 transition-colors">GitHub</a>
+        </div>
+      </footer>
+    </div>
+  );
+}
+tHub</a>
         </div>
       </footer>
     </div>
