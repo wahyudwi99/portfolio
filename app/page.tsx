@@ -1,67 +1,72 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 
 export default function LightProfessionalPortfolio() {
   const experiences = [
     {
-      title: "Senior AI Engineer (Operation Excellence)",
-      company: "Mbiz.co.id",
-      location: "Jakarta, Indonesia",
-      period: "Mar 2025 - present",
-      description: "Architected a scalable, parallelized pipeline using Python and Airflow processing 2M+ daily data points, while engineering an enterprise-grade agentic RAG chatbot for L1 helpdesk automation. Spearheaded LLM-based content moderation via FastAPI to reduce QC workload by 70%, deployed automated payment extraction pipelines for weekly CS emails, and designed real-time BI dashboards using Apache Superset to accelerate sales decision-making and monitor transaction anomalies."
+        "company": "Artefact Consulting",
+        "location": "Jakarta, Indonesia",
+        "period": "Jun 2026 - present",
+        "roles": [
+            {
+                "title": "Data Scientist",
+                "period": "Jun 2026 - present",
+                "description": "Developed regression-based machine learning models to forecast advertising impressions across multiple brands, turning historical campaign and business signals into forecasts for media planning. Designed and maintained dbt ingestion and transformation workflows to build analytics-ready datamarts from heterogeneous data sources. Integrated feature-ready datasets with model training and inference pipelines to ensure consistent transformations from raw data to predictions."
+            }
+        ]
     },
     {
-      title: "Data Scientist",
-      company: "Mbiz.co.id",
-      location: "Jakarta, Indonesia",
-      period: "Oct 2023 - Mar 2025",
-      description: "Developed containerized LLM and OCR microservices using Docker and Airflow, achieving a 10x speed increase and minimizing verification errors. Designed intelligent ML scoring algorithms for 70% better task routing efficiency and integrated NLP text classification with CV-based signature detection to reduce Average Handling Time (AHT) by 20%, significantly streamlining core customer service operations."
+        "company": "Mbiz.co.id",
+        "location": "Jakarta, Indonesia",
+        "period": "Oct 2023 - Jun 2026",
+        "roles": [
+            {
+                "title": "Senior AI Engineer (Operation Excellence)",
+                "period": "Mar 2025 - Jun 2026",
+                "promotion": true,
+                "description": "Architected a scalable, parallelized pipeline using Python and Airflow processing 2M+ daily data points, while engineering an enterprise-grade agentic RAG chatbot for L1 helpdesk automation. Spearheaded LLM-based content moderation via FastAPI to reduce QC workload by 70%, deployed automated payment extraction pipelines for weekly CS emails, and designed real-time BI dashboards using Apache Superset to accelerate sales decision-making and monitor transaction anomalies."
+            },
+            {
+                "title": "Data Scientist",
+                "period": "Oct 2023 - Mar 2025",
+                "description": "Developed containerized LLM and OCR microservices using Docker and Airflow, achieving a 10x speed increase and minimizing verification errors. Designed intelligent ML scoring algorithms for 70% better task routing efficiency and integrated NLP text classification with CV-based signature detection to reduce Average Handling Time (AHT) by 20%, significantly streamlining core customer service operations."
+            }
+        ]
     },
     {
-      title: "Research & Development Engineer (Machine Learning)",
-      company: "Sistem Integrasi Mandiri",
-      location: "Jakarta, Indonesia",
-      period: "Nov 2022 - Oct 2023",
-      description: "Trained and deployed custom YOLO-based object detection for real-time video surveillance, achieving over 70% mAP@0.5. Built multivariate LSTM-based forecasting models for proactive server maintenance and pioneered an internal knowledge base by customizing locally hosted Llama models with ChromaDB and LangChain to create a highly accurate RAG pipeline for operational guidelines."
+        "company": "Sistem Integrasi Mandiri",
+        "location": "Jakarta, Indonesia",
+        "period": "Nov 2022 - Oct 2023",
+        "roles": [
+            {
+                "title": "Research & Development Engineer (Machine Learning)",
+                "period": "Nov 2022 - Oct 2023",
+                "description": "Trained and deployed custom YOLO-based object detection for real-time video surveillance, achieving over 70% mAP@0.5. Built multivariate LSTM-based forecasting models for proactive server maintenance and pioneered an internal knowledge base by customizing locally hosted Llama models with ChromaDB and LangChain to create a highly accurate RAG pipeline for operational guidelines."
+            }
+        ]
     }
-  ];
+];
 
   const projects = [
     {
       year: "2026",
-      title: "Agentic Chatbot RAG for Enterprise Knowledge Base",
-      description: "Decoupled, event-driven RAG pipeline isolating I/O-bound retrieval from compute-bound inference to minimize latency.",
-      link: "/agentic-rag",
-      tag: "Engineering Project"
+      title: "See It, Say It, Pick It - A vision-language pipeline for instruction-driven scene understanding",
+      description: "Built a vision-language pipeline combining Meta SAM 3 for visual segmentation with Apertus 1.5 70B for language understanding. Integrated visual and language processing to connect scene content with natural-language instructions. Delivered the project with the team for Hack Apertus Track 2a, earning 2nd Runner Up.",
+      link: "https://github.com/azamafridi23/see-it-say-it-pick-it-hack-apertus/tree/main/track_2a",
+      award: "2nd Runner Up · Hack Apertus",
+      awardLink: "https://www.linkedin.com/feed/update/urn:li:share:7519378084668801027/"
     },
     {
       year: "2026",
-      title: "LLM-Powered Document Information Extraction",
-      description: "Containerized document verification microservice using Docker and Airflow, achieving 10x processing speed improvements.",
-      link: "/llm-document-extraction",
-      tag: "Engineering Project"
+      title: "Worldstate - A generative world model for visual dynamics",
+      description: "Built a generative world model using a Variational Autoencoder (VAE) to encode visual observations into a compact latent space. Implemented an MDN-RNN to model temporal dynamics and predict distributions over future latent states. Combined latent-state prediction with VAE decoding to generate visual sequences over time.",
+      link: "https://github.com/wahyudwi99/Worldstate"
     },
     {
       year: "2025",
-      title: "Convolution Autoencoder: Image Compression Into Latent Space",
-      description: "Image compression mechanism that compress image to latent space (low kernel size), then convert back to original space with low reconstruction loss.",
-      link: "/convolutional-autoencoder",
-      tag: "Computer Vision"
-    },
-    {
-      year: "2024",
-      title: "IEEE Credit Card Fraud Detection",
-      description: "Detecting fraud in credit card transactions using various machine learning models with highly imbalanced data.",
-      link: "/fraud-detection",
-      tag: "Machine Learning"
-    },
-    {
-      year: "2023",
-      title: "YOLO: Object Detection in Low Light",
-      description: "Object detection with YOLO model to detect objects in restricted area using thermal camera (low light).",
-      link: "/object-detection",
-      tag: "Computer Vision"
+      title: "Convolutional Autoencoder - Image compression and reconstruction through latent representations",
+      description: "Developed a convolutional autoencoder for image compression and reconstruction using Conv2d layers to encode images into a compact latent representation. Built a ConvTranspose2d decoder to recover spatial structure and visual detail. Trained the model with Mean Absolute Error (MAE) loss and evaluated reconstruction quality on crop images.",
+      link: "https://github.com/wahyudwi99/Convolution-Autoencoder"
     }
   ];
 
@@ -146,21 +151,32 @@ export default function LightProfessionalPortfolio() {
           </div>
           
           <div className="space-y-16">
-            {experiences.map((exp, index) => (
-              <div key={index} className="relative pl-8 border-l border-zinc-200 group">
-                <div className="absolute w-3 h-3 bg-zinc-200 rounded-full -left-[6.5px] top-2 group-hover:bg-emerald-500 transition-colors"></div>
-                <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
+            {experiences.map((experience) => (
+              <div key={experience.company}>
+                <div className="mb-8 flex flex-col gap-2 md:flex-row md:items-baseline md:justify-between md:gap-6">
                   <div>
-                    <h3 className="text-2xl font-bold text-zinc-900 tracking-tight">{exp.title}</h3>
-                    <p className="text-emerald-600 font-medium">{exp.company}</p>
+                    <h3 className="text-2xl font-bold tracking-tight text-zinc-900">{experience.company}</h3>
+                    <p className="mt-1 text-sm text-zinc-500">{experience.location}</p>
                   </div>
-                  <div className="text-sm font-bold text-zinc-400 uppercase tracking-widest mt-2 md:mt-0">
-                    {exp.period}
-                  </div>
+                  <span className="text-sm font-medium text-zinc-400">{experience.period}</span>
                 </div>
-                <p className="text-zinc-500 leading-relaxed font-light italic max-w-3xl text-justify">
-                  {exp.description}
-                </p>
+                <div className="ml-1 border-l border-zinc-200">
+                  {experience.roles.map((role) => (
+                    <div key={role.title} className="group relative pb-10 pl-7 last:pb-0 sm:pl-8">
+                      <span aria-hidden="true" className="absolute -left-[5px] top-2 h-[9px] w-[9px] rounded-full bg-emerald-500 ring-4 ring-[#f8f9fa]" />
+                      <div className="mb-4 flex flex-col gap-2 md:flex-row md:items-baseline md:justify-between md:gap-6">
+                        <div>
+                          {'promotion' in role && role.promotion && (
+                            <span className="mb-3 inline-flex rounded-full border border-emerald-100 bg-emerald-50 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-emerald-700">Promoted</span>
+                          )}
+                          <h4 className="text-lg font-semibold tracking-tight text-zinc-900 sm:text-xl">{role.title}</h4>
+                        </div>
+                        <span className="shrink-0 text-xs font-medium text-zinc-400">{role.period}</span>
+                      </div>
+                      <p className="max-w-3xl text-justify font-light leading-relaxed text-zinc-500">{role.description}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
@@ -173,15 +189,25 @@ export default function LightProfessionalPortfolio() {
             <div className="h-px flex-1 bg-zinc-200 ml-12"></div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24">
-            {projects.map((project, index) => (
-              <Link href={project.link} key={index} className="group block">
-                <span className="text-emerald-600 text-[12px] font-black uppercase tracking-[0.2em] mb-4 block">{project.year}</span>
-                <h3 className="text-2xl font-bold text-zinc-900 mb-4 tracking-tight group-hover:text-emerald-600 transition-colors">{project.title}</h3>
-                <p className="text-zinc-500 leading-relaxed font-light italic text-sm">
-                  {project.description}
-                </p>
-              </Link>
+          <div className="grid grid-cols-1 gap-8">
+            {projects.map((project) => (
+              <article key={project.link} className="project-card flex flex-col items-start rounded-3xl border border-zinc-200 bg-white p-7 shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-all duration-300 hover:border-emerald-300 hover:shadow-[0_16px_48px_rgba(16,185,129,0.08)] sm:p-10">
+                {project.award && (
+                  <a href={project.awardLink} target="_blank" rel="noopener noreferrer" className="mb-5 inline-flex items-center gap-2 rounded-full border border-amber-200 bg-amber-50 px-3 py-1.5 text-xs font-semibold text-amber-800 transition-colors hover:bg-amber-100 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-600">
+                    <span aria-hidden="true">🏆</span>
+                    {project.award}
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                )}
+                <div className="mb-4 flex w-full flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
+                  <h3 className="text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl">{project.title}</h3>
+                  <span className="shrink-0 text-sm font-medium text-zinc-400">{project.year}</span>
+                </div>
+                <p className="mb-8 max-w-3xl text-justify text-sm leading-relaxed text-zinc-500">{project.description}</p>
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="mt-auto inline-flex items-center gap-3 rounded-full bg-emerald-100 px-5 py-3 text-xs font-semibold text-emerald-800 transition-colors hover:bg-emerald-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-600">
+                  View on GitHub <span aria-hidden="true">↗</span>
+                </a>
+              </article>
             ))}
           </div>
         </section>

@@ -25,8 +25,6 @@ function Projects() {
             <p className="text-center mt-2">Click on each box for the detail !</p>
             <div className="flex flex-col items-center gap-10 mt-10">
                 <ProjectCards text="Image Dimensionality Reduction Using Convolutional Autoencoder" link="/convolutional-autoencoder"/>
-                <ProjectCards text="Thermal Imagery Object Detection Using YOLO" link="object-detection"/>
-                <ProjectCards text="IEEE Fraud Transaction Detection" link="fraud-detection"/>
             </div>
         </div>
     )
