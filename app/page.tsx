@@ -50,11 +50,19 @@ export default function LightProfessionalPortfolio() {
   const projects = [
     {
       year: "2026",
-      title: "See It, Say It, Pick It - A vision-language pipeline for instruction-driven scene understanding",
+      title: "See It, Say It, Pick It - A Vision-Language Pipeline for Instruction-Driven Scene Understanding in Robotics",
       description: "Built a vision-language pipeline combining Meta SAM 3 for visual segmentation with Apertus 1.5 70B for language understanding. Integrated visual and language processing to connect scene content with natural-language instructions. Delivered the project with the team for Hack Apertus Track 2a, earning 2nd Runner Up.",
       link: "https://github.com/azamafridi23/see-it-say-it-pick-it-hack-apertus/tree/main/track_2a",
       award: "2nd Runner Up · Hack Apertus",
-      awardLink: "https://www.linkedin.com/feed/update/urn:li:share:7519378084668801027/"
+      articleLink: "https://www.linkedin.com/feed/update/urn:li:share:7519378084668801027/"
+    },
+    {
+      year: "2026",
+      title: "DocuNative - Offline Cross-Lingual Document QA with a Small Multilingual Model",
+      description: "Developed an on-device multilingual document assistant with the team through Expedition Tiny Aya. Combined Tiny Aya with multilingual retrieval and question answering to help newcomers understand sensitive documents privately. Explored how document-query language alignment affects retrieval quality. Featured in Cohere's Tiny Aya in the wild article.",
+      link: "https://github.com/docunative-AI/docunative",
+      participation: "Hackathon Participant · Cohere AI Hackathon",
+      articleLink: "https://cohere.com/blog/tiny-aya-in-the-wild"
     },
     {
       year: "2026",
@@ -88,9 +96,6 @@ export default function LightProfessionalPortfolio() {
             <a href="#projects" className="hover:text-emerald-600 transition-colors">Projects</a>
             <a href="#contact" className="hover:text-emerald-600 transition-colors">Contact</a>
           </div>
-          <a href="https://drive.google.com/file/d/1GrYnAt4gVtgXHpJUzHRFM32dVdGH1idH/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-[10px] font-black uppercase tracking-widest border border-zinc-900 px-6 py-2 rounded-full text-zinc-900 hover:bg-zinc-900 hover:text-white transition-all">
-            Resume
-          </a>
         </div>
       </nav>
 
@@ -114,8 +119,10 @@ export default function LightProfessionalPortfolio() {
                 </span>
               </h1>
               <p className="text-lg md:text-xl text-zinc-500 max-w-xl leading-relaxed font-light mb-12 mx-auto md:mx-0">
-                Senior ML Engineer focused on building high-performance neural systems 
-                and production-ready architectures for the modern enterprise.
+                I research and engineer AI systems across language and vision, designing
+                experiments, evaluating models, and building production-ready applications.
+                My work bridges rigorous experimentation and practical engineering to turn
+                research ideas into reliable systems for real-world use.
               </p>
               <div className="flex justify-center md:justify-start gap-8">
                 <a href="#projects" className="group flex items-center gap-3 text-zinc-900 font-bold tracking-tight text-sm hover:text-emerald-600 transition-colors">
@@ -192,21 +199,32 @@ export default function LightProfessionalPortfolio() {
           <div className="grid grid-cols-1 gap-8">
             {projects.map((project) => (
               <article key={project.link} className="project-card flex flex-col items-start rounded-3xl border border-zinc-200 bg-white p-7 shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-all duration-300 hover:border-emerald-300 hover:shadow-[0_16px_48px_rgba(16,185,129,0.08)] sm:p-10">
+                {project.participation && (
+                  <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-amber-200 bg-amber-50 px-3 py-1.5 text-xs font-semibold text-amber-800">
+                    {project.participation}
+                  </span>
+                )}
                 {project.award && (
-                  <a href={project.awardLink} target="_blank" rel="noopener noreferrer" className="mb-5 inline-flex items-center gap-2 rounded-full border border-amber-200 bg-amber-50 px-3 py-1.5 text-xs font-semibold text-amber-800 transition-colors hover:bg-amber-100 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-600">
+                  <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-amber-200 bg-amber-50 px-3 py-1.5 text-xs font-semibold text-amber-800">
                     <span aria-hidden="true">🏆</span>
                     {project.award}
-                    <span aria-hidden="true">↗</span>
-                  </a>
+                  </span>
                 )}
                 <div className="mb-4 flex w-full flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
                   <h3 className="text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl">{project.title}</h3>
                   <span className="shrink-0 text-sm font-medium text-zinc-400">{project.year}</span>
                 </div>
                 <p className="mb-8 max-w-3xl text-justify text-sm leading-relaxed text-zinc-500">{project.description}</p>
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="mt-auto inline-flex items-center gap-3 rounded-full bg-emerald-100 px-5 py-3 text-xs font-semibold text-emerald-800 transition-colors hover:bg-emerald-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-600">
+                <div className="mt-auto flex flex-wrap gap-3">
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 rounded-full bg-emerald-100 px-5 py-3 text-xs font-semibold text-emerald-800 transition-colors hover:bg-emerald-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-600">
                   View on GitHub <span aria-hidden="true">↗</span>
                 </a>
+                {project.articleLink && (
+                  <a href={project.articleLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 rounded-full border border-zinc-200 px-5 py-3 text-xs font-semibold text-zinc-700 transition-colors hover:border-emerald-300 hover:text-emerald-800 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-600">
+                    Article <span aria-hidden="true">↗</span>
+                  </a>
+                )}
+                </div>
               </article>
             ))}
           </div>
